@@ -1,4 +1,5 @@
 from concurrent import futures
+import json
 
 import boto3
 
@@ -19,8 +20,10 @@ def invoke_code_start():
         FunctionName='code_start',
         InvocationType='RequestResponse',
     )
-    record = response['Payload'].read()
-    print "This is the %s time this container is used" % record
+    result = json.loads(response['Payload'].read())
+    container_id = result[0]
+    count = result[1]
+    print "%s: This is the %s time this container is used\n" % (container_id, count)
 
 
 # concurrently call lambda function
