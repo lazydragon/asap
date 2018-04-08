@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: serverless hello world 
+Resources:
+  HelloWorld:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: sync.lambda_handler
+      Runtime: python3.6 
+      CodeUri: ./sync
+Outputs:
+  LambdaName:
+    Description: Lambda function name generated
+    Value: !Ref HelloWorld
