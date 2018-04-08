@@ -17,9 +17,6 @@ sam --version
 # sam local commands
 
 ```
-# generate events
-sam local generate-event <s3/sns etc.>
-
 # write a template.yaml config of your serverless application
 # please check here for property details: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html
 # sync invoke a lambda called HelloWorld 
