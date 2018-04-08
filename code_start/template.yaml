@@ -8,3 +8,7 @@ Resources:
       Handler: lambda.lambda_handler
       Runtime: python3.6 
       CodeUri: ./src
+Outputs:
+  LambdaName:
+    Description: Lambda function name generated
+    Value: !Ref CodeStart
