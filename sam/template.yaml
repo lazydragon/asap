@@ -7,7 +7,13 @@ Resources:
     Properties:
       Handler: sync.lambda_handler
       Runtime: python3.6 
-      CodeUri: ./sync
+      CodeUri: ./python
+  HelloWorldGo:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: main
+      Runtime: go1.x 
+      CodeUri: ./go
 Outputs:
   LambdaName:
     Description: Lambda function name generated

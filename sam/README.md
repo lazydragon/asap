@@ -22,6 +22,12 @@ sam --version
 # sync invoke a lambda called HelloWorld 
 echo '{}' | sam local invoke "HelloWorld"
 
+# for go example
+# build go code
+go get github.com/aws/aws-lambda-go/lambda
+GOOS=linux GOARCH=amd64 go build -o main main.go
+# invoke lambda
+echo '{}' | sam local invoke "HelloWorldGo"
 ```
 
 # sam deployment commands
