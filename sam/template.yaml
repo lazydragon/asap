@@ -18,3 +18,6 @@ Outputs:
   LambdaName:
     Description: Lambda function name generated
     Value: !Ref HelloWorld
+  GoLambdaName:
+    Description: Go Lambda function name generated
+    Value: !Ref HelloWorldGo
